@@ -310,5 +310,5 @@ So there.
 
 I totally lost count of the number of times I typed "Cat" and then replaced it with "Car" when I wrote this.
 
-![images/cats.png]
+![Cats.](images/cats.png)
 
