@@ -1,3 +1,5 @@
+# The Curious Case of Tautological TDD
+
 In 2014 I read an article with the provocative title ["Mockists are Dead. Long live Classicists."](#ref-mockists-are-dead). In it, the author frames mock objects as "dangerous" and warns against a mistake he calls "tautological TDD", which he describes as writing tests that repeat an idea in different words. This sounds risky to me, and something I'd probably want to warn against. I wondered how mock objects could create this problem, then I examined his example.[^ref-ttdd-example]
 
 [^ref-ttdd-example]: Fabio Pereira, ["TTDD - Tautological Test Driven Development (Anti Pattern)"](http://link.jbrains.ca/RE9DUO)
