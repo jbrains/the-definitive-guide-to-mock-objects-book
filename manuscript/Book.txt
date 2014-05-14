@@ -1,1 +1,1 @@
-../fieldstones/TautologicalTdd.md
+chapter-01.txt
