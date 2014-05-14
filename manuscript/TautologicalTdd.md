@@ -67,9 +67,11 @@ Let me offer another way to interpret the situation. Some objects interact very,
 
 The author's example leaves me a bit confused. I don't quite understand the division of responsibility among the `CarRepository`, the `ServiceHeaderFactory` and the `CarService`. Since I can't use the author a definitive source of information, let me draw some conclusions from the code itself. It seems that `CarService` bears the responsibility for finding cars based on something called the *service header*. It seems that `CarRepository` wants to "find all the cars", but doesn't want to specify a service header, pushing that responsibility up to the caller. And at this point, I have no idea why `CarRepository` even exists.
 
-Meet Bob. Bob has a *service header* (whatever that is) and wants to find all the corresponding cars.
+Meet Bob. 
 
-***NYI*** Image of Bob with a service header, looking quizzical and wishing for a bunch of cars.
+![Bob.](images/quizzical-bob.png)
+
+Bob has a *service header* (whatever that is) and wants to find all the corresponding cars, but he can't figure out how to make that happen.
 
 Looking at the code available, Bob has two options:
 
