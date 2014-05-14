@@ -9,3 +9,7 @@
 [Gamma, Erich and others. *Design Patterns*](http://link.jbrains.ca/11ATEqK)
 
 : {: #ref-design-patterns-book} ***NYI***
+
+[Fowler, Martin. *Refactoring: Improving the Design of Existing Code*](http://link.jbrains.ca/UiOGui)
+
+: {: #ref-refactoring-book} ***NYI***

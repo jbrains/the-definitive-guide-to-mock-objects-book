@@ -8,4 +8,8 @@ I say all this to ask you not to run away because you do Clojure and objects "ar
 
 [^refund]: If you find it really terrible, then remember that you have 45 days to get your refund. No hard feelings.
 
+## Handrolled Test Doubles or Libraries?
+
+I so don't care. Do whatever makes you happy. I use libraries (JMock, rspec-mock, google-mock, whatever you've got) because I understand them, I don't mind their syntax, and it gives me uniform style throughout my code base. If you handroll your stubs, I don't mind. (On the contrary, handrolling stubs encourages segregating interfaces more.) If you handroll method expectations and the inevitable duplication never starts to bother you, then we'll have to have a talk.
+
 ***NYI***
