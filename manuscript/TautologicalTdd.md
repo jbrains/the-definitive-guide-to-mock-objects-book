@@ -156,13 +156,13 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
   final ServiceHeader serviceHeader = new ServiceHeader();
 
   final CarService carService = mock(CarService.class);
+
+  // Implicitly verifies that findAll() receives the correct argument
   when(carService.findAll(serviceHeader)).thenReturn(cars);
 
   final CarRepository carRepository = new CarRepository(carService, serviceHeader);
 
   assertSame(cars, carRepository.findAll());
-
-  verify(carService).findAll(serviceHeader);
 }
 ```
 
@@ -193,14 +193,14 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
   final ServiceHeader expectedServiceHeader = new ServiceHeader("my guess at the correct properties for service header");
 
   final CarService carService = mock(CarService.class);
-  when(carService.findAll(expectedServiceHeader)).thenReturn(cars);
+
+  // Implicitly verifies that findAll() receives the correct argument
+  when(carService.findAll(argThat(equalTo(expectedServiceHeader)))).thenReturn(cars);
 
   // The CarRepository encapsulates the service header
   final CarRepository carRepository = new CarRepository(carService);
 
   assertSame(cars, carRepository.findAll());
-
-  verify(carService).findAll(argThat(equalTo(expectedServiceHeader)));
 }
 ```
 
@@ -229,6 +229,8 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
   final ServiceHeader anyServiceHeader = new ServiceHeader();
 
   final CarService carService = mock(CarService.class);
+
+  // Implicitly verifies that findAll() receives the correct argument
   when(carService.findAll(anyServiceHeader)).thenReturn(cars);
 
   // The CarRepository encapsulates the service header
@@ -240,8 +242,6 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
   };
 
   assertSame(cars, carRepository.findAll());
-
-  verify(carService).findAll(anyServiceHeader);
 }
 ```
 
@@ -268,13 +268,13 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
   final ServiceHeader anyServiceHeader = new ServiceHeader();
 
   final CarService carService = mock(CarService.class);
+
+  // Implicitly verifies that findAll() receives the correct argument
   when(carService.findAll(anyServiceHeader)).thenReturn(cars);
 
   final CarRepository carRepository = new CarRepository(carService, anyServiceHeader);
 
   assertSame(cars, carRepository.findAll());
-
-  verify(carService).findAll(anyServiceHeader);
 }
 ```
 
