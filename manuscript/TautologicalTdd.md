@@ -166,6 +166,8 @@ public void searchesForCarsWithTheRightServiceHeader() throws Exception {
 }
 ```
 
+> Just to simplify the discussion, I've assumed the best-case scenario of an immutable `Cars` object. I would hate to jump through the additional hoops necessary if someone had made `Cars` mutable. (Don't do that. Really.)
+
 Far from "tautological", this test describes **the very purpose** of `CarRepository`: it relies on `CarService` to find the right cars, but it has to provide the right `serviceHeader`.
 
 **Uh... why not just write integrated tests?** Fabio recommended this in his article. I don't feel the need to duplicate all the tests for `CarService` in order to test `CarRepository`. I also don't feel comfortable testing `CarService` only through `CarRepository`, especially given that `CarService` exports a much more convenient interface to its clients. If anything, I wouldn't bother testing `CarRepository` and put all my energy into testing `CarService`. Seriously.
